@@ -1,0 +1,26 @@
+<section id="home-section">
+    <h1>HOme Page</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, officiis incidunt numquam, quia doloribus id odit a nam eos porro atque quidem quae nemo nihil. Laborum non molestias hic eos!
+    </p>
+</section>
+<section id="featured-section">
+        <h2>ALL THE FEATURED PRODUCTS</h2>
+
+        {{#each featuredProducts}}
+          
+            <div>
+
+                <p>
+                    Title : {{this.title}} <br>
+                    Description : {{this.description}} <br>
+                    Price : {{this.price}}   <br>
+                </p>
+                
+                <img src="{{this.img}}" alt="">
+            </div>
+
+        
+        {{/each}}
+
+</section>

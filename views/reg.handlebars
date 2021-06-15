@@ -1,0 +1,62 @@
+<section id="registration-container">
+
+    <!-- 
+
+        Follow these steps when you are dealing
+        with forms that are intended to submit data
+        to the server
+
+
+        1. Ensure that you specify an action and method 
+        attribute
+
+        2. Ensure that your button is a Submit button
+
+        For example <button type="submit>Create Account </button>
+        or
+
+        <input type="submit" value="Create Account" >
+
+        3. Ensure that ALL of your form controls/widgets
+        have a name attribute with a value
+
+        4.
+
+
+    -->
+
+    {{#each errors}}
+       <div>
+            {{this}}
+        </div>  
+    {{/each}}
+    
+    <form action="/user/registration" method="POST">
+
+        <div class="form-controller">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName">
+        </div>
+
+        <div class="form-controller">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName">
+        </div>
+
+
+        <div class="form-controller">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email">
+        </div>
+
+        <div class="form-controller">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+        </div>
+
+        <div class="form-controller">
+            <button type="submit">SIgn Up</button>
+        </div>
+
+    </form>
+</section>
